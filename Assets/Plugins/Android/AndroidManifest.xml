@@ -21,7 +21,5 @@
     <meta-data android:name="ymp_gcm_default_sender_id" android:value="number:778057921335" />
     <meta-data android:name="ymp_firebase_default_api_key" android:value="AIzaSyAcXIsO4TFiuFCXWPOgverSJYZ7wuNeAhg" />
     <meta-data android:name="ymp_firebase_default_project_id" android:value="aviarotbrentrintracewin" />
-    <meta-data android:name="io.branch.sdk.TestMode" android:value="false" />
-    <meta-data android:name="io.branch.sdk.BranchKey.test" android:value="key_live_mgW16GVYfDELgpUd4Fp6qpefqEi1LpcX" />
   </application>
 </manifest>
