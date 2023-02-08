@@ -30,10 +30,10 @@
     <meta-data android:name="io.branch.sdk.auto_link_disable" android:value="false"/>
 
     <!--Set true to simulate fresh installs -->
-    <meta-data android:name="io.branch.sdk.TestMode" android:value="false" />
+    <meta-data android:name="io.branch.sdk.TestMode" android:value="true" />
 
     <!--Branch key-->
-    <meta-data android:name="io.branch.sdk.BranchKey.test" android:value="key_live_mgW16GVYfDELgpUd4Fp6qpefqEi1LpcX" />
+    <meta-data android:name="io.branch.sdk.BranchKey.test" android:value="key_xxxx" />
 
   </application>
   

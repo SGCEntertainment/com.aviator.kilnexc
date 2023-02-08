@@ -4,18 +4,29 @@ public class BranchHelper : MonoBehaviour
 {
     private void Start()
     {
+        if (BranchData.Instance.enableLogging)
+        {
+            Branch.setDebug();
+        }
+
+        // disable tracking of analytics for the user
+        Branch.setTrackingDisabled(false);
+
         Branch.initSession(CallbackWithBranchUniversalObject);
     }
 
-    private void CallbackWithBranchUniversalObject(BranchUniversalObject buo, BranchLinkProperties linkProps, string error)
+    public void CallbackWithBranchUniversalObject(BranchUniversalObject universalObject, BranchLinkProperties linkProperties, string error)
     {
         if (error != null)
         {
-            Debug.LogError("Error : " + error);
+            Debug.LogError("Branch Error: " + error);
         }
-        else if (linkProps.controlParams.Count > 0)
+        else
         {
-            Debug.Log("Deeplink params : " + buo.ToJsonString() + linkProps.ToJsonString());
+            Debug.Log("Branch initialization completed: ");
+
+            Debug.Log("Universal Object: " + universalObject.ToJsonString());
+            Debug.Log("Link Properties: " + linkProperties.ToJsonString());
         }
     }
 }
